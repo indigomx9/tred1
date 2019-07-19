@@ -2,6 +2,6 @@
 // The next item in the Object would be (1), etc.
 
 export enum ActionTypes {
-    fetchTodos = 0  
+    fetchTodos
 };
 

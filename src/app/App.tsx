@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Navbar } from "../navbar/Navbar";
 import { Home } from "../components/Home";
 import { About } from "../components/About";
-import { There } from "../containers/There";
+import { JTodosConnect } from "../containers/JTodosConnect";
 import "./App.css";
 
 export const App = () => (
@@ -13,7 +13,7 @@ export const App = () => (
             <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/about" component={About} />
-                <Route path="/there" component={There} />
+                <Route path="/jtodos" component={JTodosConnect} />
             </Switch>
         </React.Fragment>
     </BrowserRouter>
