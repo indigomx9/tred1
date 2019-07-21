@@ -1,7 +1,9 @@
-// Stephen said that zero (0) was the default.
-// The next item in the Object would be (1), etc.
+import { FetchTodosAction, DeleteTodoAction } from "./todos";
 
 export enum ActionTypes {
-    fetchTodos
+    fetchTodos = 0,
+    deleteTodo = 1,
 };
+
+export type Action = FetchTodosAction | DeleteTodoAction;
 

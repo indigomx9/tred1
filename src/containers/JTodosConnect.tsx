@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Todo, fetchTodos } from "../actions/ActionCreators";
+import { Todo, fetchTodos, deleteTodo } from "../actions/ActionCreators";
 import { StoreState } from "../reducers/rootReducer";
 
 interface IProps {
@@ -35,7 +35,7 @@ const mapStateToProps = ({todos}: StoreState): { todos: Todo[] } => {
 
 export const JTodosConnect = connect(
     mapStateToProps,
-    { fetchTodos }
+    { fetchTodos, deleteTodo }
 )(JTodos);
 
 
