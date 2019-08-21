@@ -2,6 +2,7 @@
     "compilerOptions": {
         "outDir": "./dist/",
         "moduleResolution": "node",
+        "strict": true,
         "skipLibCheck": true,
         "allowJs": true,
         "resolveJsonModule": true,

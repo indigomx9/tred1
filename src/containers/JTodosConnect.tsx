@@ -4,7 +4,7 @@ import { Todo, fetchTodos, deleteTodo } from "../actions/ActionCreators";
 import { StoreState } from "../reducers/rootReducer";
 
 interface IProps {
-    todos: Todo[];
+    todos: Todo[];    
     fetchTodos: Function;
     deleteTodo: typeof deleteTodo;
 };
@@ -34,7 +34,9 @@ class JTodos extends React.Component <IProps, IState> {
     renderList = (): JSX.Element[] => {
         return this.props.todos.map((todo: Todo) => {
             return (
-                <main key={todo.id}>
+                <main 
+                    onClick={() => this.onTodoClick(todo.id)}
+                    key={todo.id}>
                     {todo.title}
                 </main>
             );
@@ -52,8 +54,8 @@ class JTodos extends React.Component <IProps, IState> {
     }
 };
 
-const mapStateToProps = ({todos}: StoreState): { todos: Todo[] } => {
-    return { todos };
+const mapStateToProps = (state: StoreState): { todos: Todo[] } => {
+    return { todos: state.todos };
 };
 
 export const JTodosConnect = connect(

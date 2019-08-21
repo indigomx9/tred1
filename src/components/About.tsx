@@ -1,6 +1,6 @@
 import React from "react";
 
-export const About = () => {
+export const About = (): JSX.Element => {
     return (
         <React.Fragment>
             <h1 className="banner">About</h1>
